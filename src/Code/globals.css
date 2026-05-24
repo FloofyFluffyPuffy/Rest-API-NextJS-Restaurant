@@ -1,0 +1,125 @@
+@import "tailwindcss";
+body {
+  background: white;
+  color: black;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/* Targets the text inside native date and time fields when no value is chosen */
+input[type="date"]::-webkit-datetime-edit,
+input[type="time"]::-webkit-datetime-edit {
+  color: #858485; /* Change this to match other inputs field placeholder color */
+}
+
+h1{
+  font-family: "Georgia", "Times New Roman", serif;
+}
+/* Change the color of the active bullet */
+.swiper-pagination-bullet {
+  
+    width: 14px !important;
+    height: 14px !important;
+    background-color: #ffffff !important; 
+    margin: 0 4px !important;
+    transition: all 0.4s ease-in-out !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #CDA45E !important;
+}
+.topBar {
+  @apply h-8 fixed top-0 left-0 right-0 flex items-center justify-center transition-transform duration-300 ease-in-out z-50;
+}
+/* Header */
+.header {
+  @apply text-white right-0 left-0 top-0 fixed transition-transform duration-300 ease-in-out items-center grid grid-cols-3 h-16 z-50
+  /* z-49 so it hid behind topbar and make the transition of both top bar and header smooth when scroll
+  translate y conditional is applied */;
+}
+.headerTrans {
+  @apply opacity-50
+}
+/* Navbar */
+.logo {
+  @apply ml-3;
+}
+.navBtn {
+  @apply flex gap-6 justify-self-center;
+}
+.btn {
+  @apply flex text-[12px] rounded-full border-2 border-[#CDA45E] py-2 px-6 transition-colors duration-500;
+}
+.btn:hover {
+  @apply bg-[#CDA45E];
+}
+.backTopBtn {
+  @apply flex fixed bottom-10 right-10 w-[44px] h-[44px] shadow-lg items-center justify-center border-2 border-[#CDA45E] rounded-full text-[#CDA45E]
+  transition-all ease-in-out duration-300;
+}
+.backTopBtn:hover {
+  @apply text-[#37332e] shadow-xl scale-120 transition duration-300 bg-[#CDA45E];
+}
+.sectionHeading{
+  @apply text-[#A0A0A0] uppercase tracking-widest text-sm font-medium
+}
+/* Hero */
+.hero {
+  @apply h-screen pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+    url("/assets/imgi_54_hero-bg.111406a4.jpg");
+}
+.about {
+  @apply flex h-screen bg-cover bg-center bg-no-repeat bg-fixed;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+    url("/assets/imgi_55_about-bg.755e6d02.jpg");
+}
+.events{
+    @apply h-screen bg-cover bg-center bg-no-repeat bg-fixed;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+    url("/assets/imgi_56_events-bg.59c0572d.jpg");
+}
+.whyUsList {
+  @apply grid grid-cols-3 gap-8 pt-12 justify-evenly mx-4 my-4;
+}
+.whyUsCard {
+  @apply bg-[#1A1814] text-center rounded-xl p-4 transition-transform duration-300 ease-in-out
+  flex flex-col justify-center items-center h-50 ;
+}
+.whyUsCard:hover {
+  @apply bg-[#CDA45E] scale-108;
+}
+.aboutImg {
+  @apply transition-transform duration-500  outline-[#3A3937] outline-4;
+}
+.aboutImg:hover {
+  @apply scale-105;
+}
+/* ------------------- */
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
