@@ -30,6 +30,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "src/app/components/Home/sections/BestSellers/MenuPreview.ts"
-  ],
+, "src/Code/components/MenuPage/Menu"  ],
   "exclude": ["node_modules"]
 }

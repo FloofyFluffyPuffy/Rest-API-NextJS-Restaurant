@@ -1,4 +1,4 @@
-import { WUCard } from "@/app/typescript/types";
+import { WUCard } from "@/Code/typescript/types";
 import { WUCardList } from "./CardText";
 
 const WhyUs = () => {
@@ -25,15 +25,17 @@ const WhyUs = () => {
       <div className="whyUsList">
         {WUCardList.map((card, index) => (
           <div
-            className="whyUsCard"
+            className="conToPreventAOSConflictWithCSSTransform"
             key={card.id}
             data-aos="zoom-in"
             data-aos-delay={index * 100}
           >
-            <h1 className="text-2xl text-[#CDA45E]">{`0${card.id}`}</h1>
+            <div className="whyUsCard">
+                          <h1 className="text-2xl text-[#CDA45E]">{`0${card.id}`}</h1>
             <h2 className="text-2xl">{card.title}</h2>
             <br />
             <h2 className="leading-relaxed">{card.reason}</h2>
+            </div>
           </div>
         ))}
       </div>

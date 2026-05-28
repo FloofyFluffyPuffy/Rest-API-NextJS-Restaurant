@@ -7,9 +7,8 @@ import { useContextData } from "../../../typescript/contexts/Provider";
 const Hero = () => {
   const { scroll, setScroll } = useContextData();
   return (
-    <div className="hero">
-      <div className="hero-content ml-9">
-        {/* Added anchor-placement to ensure it triggers immediately at the top */}
+    <div className="hero flex items-center justify-center min-h-screen text-center">
+      <div className="hero-content mt-[-34] bold uppercase tracking-widest">
         <h1
           data-aos="slide-right"
           data-aos-delay="100"
@@ -18,31 +17,30 @@ const Hero = () => {
         >
           Welcome to
         </h1>
-        <br />
-                <h1
-          data-aos="slide-right"
-          data-aos-delay="100"
-          data-aos-anchor-placement="top-bottom"
-          className="text-9xl text-amber-50"
-        >
-          yammy
-        </h1>
-        <br />
+
         <h1
           data-aos="slide-right"
-          data-aos-delay="300"
+          data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
           className="text-9xl text-[#CDA45E]"
         >
-          Restaurant
+          Downtown
+        </h1>
+               <h1
+          data-aos="slide-right"
+          data-aos-delay="200"
+          data-aos-anchor-placement="top-bottom"
+          className="text-9xl text-[#CDA45E]"
+        >
+          Bistro
         </h1>
         <h2
           data-aos="fade-up"
           data-aos-delay="500"
           data-aos-anchor-placement="top-bottom"
-          className="text-3xl text-amber-50"
+          className="text-3xl text-amber-50 mt-8"
         >
-          Delivering great food for more than 18 years!
+          Made with <span className="text-[#CDA45E]">love</span>. Served with <span className="text-[#CDA45E]">Pride.</span>
         </h2>
         <div
           data-aos="zoom-in"

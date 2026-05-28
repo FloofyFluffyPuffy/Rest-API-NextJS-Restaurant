@@ -73,7 +73,13 @@ h1{
   @apply h-screen pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
-    url("/assets/imgi_54_hero-bg.111406a4.jpg");
+    url("/assets/imgi_54_hero-bg.111406a4.jpg"); 
+}
+.menuHero {
+  @apply h-screen pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+    url("/assets/gallery-1.jpg"); 
 }
 .about {
   @apply flex h-screen bg-cover bg-center bg-no-repeat bg-fixed;
@@ -91,11 +97,11 @@ h1{
   @apply grid grid-cols-3 gap-8 pt-12 justify-evenly mx-4 my-4;
 }
 .whyUsCard {
-  @apply bg-[#1A1814] text-center rounded-xl p-4 transition-transform duration-300 ease-in-out
-  flex flex-col justify-center items-center h-50 ;
+  @apply bg-[#1A1814] text-center rounded-xl p-4 transition-transform duration-300
+  flex flex-col justify-center items-center h-50 border-[#CDA45E]/70 border-2;
 }
 .whyUsCard:hover {
-  @apply bg-[#CDA45E] scale-108;
+  @apply scale-105;
 }
 .aboutImg {
   @apply transition-transform duration-500  outline-[#3A3937] outline-4;

@@ -2,7 +2,7 @@ import Btn from "../Code/components/utilities/Btn";
 import About from "../Code/components/Home/sections/About";
 import Hero from "../Code/components/Home/sections/Hero";
 import WhyUs from "../Code/components/Home/sections/WhyUs/WhyUs";
-import BestSellers from "../Code/components/Home/sections/BestSellers";
+import HomeMenu from "../Code/components/Home/sections/HomeMenu";
 import Events from "../Code/components/Home/sections/Events";
 import Reservation from "../Code/components/Home/sections/Reservation/Revervation";
 import Testimonials from "../Code/components/Home/sections/Testimonials";
@@ -17,7 +17,7 @@ const HomePage = async () => {
       {/* <h1 className="hw">{`Hello World, i wanna eat ${fc?.acf?.name || `something`}`}</h1> */}
       <About />
       <WhyUs />
-      <BestSellers/>
+      <HomeMenu/>
       <Events/>
       <Reservation/>
       <Testimonials/>

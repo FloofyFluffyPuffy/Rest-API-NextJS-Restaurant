@@ -69,7 +69,7 @@ return (
              <div data-aos="zoom-in" data-aos-anchor=".inputCon" data-aos-delay="700" className="formSubmit flex justify-center">
                  <button 
                      type="submit" 
-                     className="cursor-pointer flex text-[18px] text-white rounded-full border-2 border-[#CDA45E] py-2 px-6 transition-all duration-500
+                     className="cursor-pointer flex text-[18px] text-white rounded-full border-2 border-[#CDA45E]/80 py-2 px-6 transition-all duration-500
                      hover:bg-[#CDA45E] hover:scale-105"
                  >
                      Book a Table

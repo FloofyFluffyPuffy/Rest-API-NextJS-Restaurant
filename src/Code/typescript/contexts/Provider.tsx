@@ -2,7 +2,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { ContextType } from "../types";
 const Context = createContext<ContextType | null>(null);
-// one thing about create context it actually must get a value to create either it the type ContextType or at least null
+// one thing about create context it actually need a value to create, so either it the type ContextType or at least null
 // (null) mean by default this have no value
 export const useContextData = () => {
   // custom hook to get context, custom hook should start with use
@@ -20,6 +20,7 @@ export const ContextProvider = ({
 }) => {
   //react component name like ContextProvider must be capitalized
   const [scroll, setScroll] = useState<number>(0);
+  
   return (
     <Context.Provider
       value={{
