@@ -45,7 +45,7 @@ const Testimonials = () => {
                 {/* Section Header */}
                 <div className="flex items-center gap-4 mb-2" data-aos="fade-up">
                     <h2 className=" sectionHeading">TESTIMONIALS</h2>
-                    <div className="h-px w-20 bg-[#37332e]"></div>
+                    <div className="h-px w-30 bg-[#37332e]"></div>
                 </div>
                 
                 <h1 className="text-4xl font-bold text-[#CDA45E] mb-12" data-aos="fade-up" data-aos-delay="100">

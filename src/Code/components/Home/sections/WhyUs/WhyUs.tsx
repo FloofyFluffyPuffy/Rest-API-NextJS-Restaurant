@@ -3,7 +3,7 @@ import { WUCardList } from "./CardText";
 
 const WhyUs = () => {
   return (
-    <div className="whyUs bg-[#0C0B09] text-amber-50 pb-20 px-8" 
+    <div className="whyUs bg-[#0C0B09] text-amber-50 p-8" 
     /*
     no height cs so it grow naturally
     p-8 so the side dont touch the screen

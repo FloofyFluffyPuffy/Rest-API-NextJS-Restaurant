@@ -172,7 +172,7 @@ const HomeMenu = async () => {
         </div>
       </div>
 
-      <div className="flex justify-center w-full mt-8">
+      <div className="BsMenuBtn flex justify-center w-full mt-8">
         <Link href="/menu" className="group relative px-6 py-3 text-sm font-medium tracking-widest text-[#CDA45E]/80 uppercase duration-300 hover:text-[#CDA45E] cursor-pointer hover:scale-110 transition-all" data-aos="fade-up" data-aos-anchor=".menuBody" data-aos-delay="400">
           Full Menu
           <span className="absolute bottom-0 left-1/2 h-px w-8 -translate-x-1/2 bg-[#CDA45E]/40 transition-all duration-300 group-hover:w-full group-hover:bg-[#CDA45E]"></span>

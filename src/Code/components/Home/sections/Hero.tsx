@@ -10,7 +10,7 @@ const Hero = () => {
     <div className="hero flex items-center justify-center min-h-screen text-center">
       <div className="hero-content mt-[-34] bold uppercase tracking-widest">
         <h1
-          data-aos="slide-right"
+          data-aos="fade-right"
           data-aos-delay="100"
           data-aos-anchor-placement="top-bottom"
           className="text-9xl text-amber-50"
@@ -19,7 +19,7 @@ const Hero = () => {
         </h1>
 
         <h1
-          data-aos="slide-right"
+          data-aos="fade-right"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
           className="text-9xl text-[#CDA45E]"
@@ -27,7 +27,7 @@ const Hero = () => {
           Downtown
         </h1>
                <h1
-          data-aos="slide-right"
+          data-aos="fade-right"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
           className="text-9xl text-[#CDA45E]"

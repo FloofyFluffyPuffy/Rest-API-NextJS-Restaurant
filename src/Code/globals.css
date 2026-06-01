@@ -76,10 +76,14 @@ h1{
     url("/assets/imgi_54_hero-bg.111406a4.jpg"); 
 }
 .menuHero {
-  @apply h-screen pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+  @apply h-[80vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
     url("/assets/gallery-1.jpg"); 
+}
+.MenuCon {
+  @apply bg-cover bg-center bg-no-repeat bg-fixed;
+  background-image: url(/assets/menuBg.jpg)
 }
 .about {
   @apply flex h-screen bg-cover bg-center bg-no-repeat bg-fixed;

@@ -44,7 +44,7 @@ const Events = () => {
     <div className="events min-h-screen p-8">
       <div className="SectionSB flex flex-row items-center" data-aos="fade-up">
         <h2 className="sectionHeading">EVENTS</h2>
-        <div className="h-px w-32 bg-[#37332e] ml-2"></div>
+        <div className="h-px w-30 bg-[#37332e] ml-2"></div>
       </div>
       <h1
         className="text-3xl font-bold text-[#CDA45E] mb-10"
