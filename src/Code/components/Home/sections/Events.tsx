@@ -9,10 +9,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const Events = () => { 
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   const events = [
     {
       id: 1,
@@ -41,7 +37,7 @@ const Events = () => {
   ];
 
   return (
-    <div className="events min-h-screen p-8">
+    <div id="events" className="events min-h-screen p-8">
       <div className="SectionSB flex flex-row items-center" data-aos="fade-up">
         <h2 className="sectionHeading">EVENTS</h2>
         <div className="h-px w-30 bg-[#37332e] ml-2"></div>

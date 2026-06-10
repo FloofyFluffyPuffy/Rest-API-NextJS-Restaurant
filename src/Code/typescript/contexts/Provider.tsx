@@ -20,12 +20,15 @@ export const ContextProvider = ({
 }) => {
   //react component name like ContextProvider must be capitalized
   const [scroll, setScroll] = useState<number>(0);
+  const [sectionHash, setSectionHash] = useState<string>("")
   
   return (
     <Context.Provider
       value={{
         scroll,
         setScroll,
+        sectionHash,
+        setSectionHash
       }}
     >
       {children}

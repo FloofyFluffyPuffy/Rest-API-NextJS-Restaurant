@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { Pagination, Autoplay } from 'swiper/modules'; // Added Autoplay module
+import { Pagination, Autoplay } from 'swiper/modules'; 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -40,19 +40,32 @@ const Testimonials = () => {
     ]
 
     return (
-        <section className="testimonials bg-[#1A1814] p-8">
+        <section id="testimonials-section" className="testimonials bg-[#1A1814] p-8">
             <div className="">
-                {/* Section Header */}
-                <div className="flex items-center gap-4 mb-2" data-aos="fade-up">
+                <div 
+                    className="flex items-center gap-4 mb-2" 
+                    data-aos="fade-up"
+                    data-aos-anchor="#testimonials-section"
+                >
                     <h2 className=" sectionHeading">TESTIMONIALS</h2>
                     <div className="h-px w-30 bg-[#37332e]"></div>
                 </div>
                 
-                <h1 className="text-4xl font-bold text-[#CDA45E] mb-12" data-aos="fade-up" data-aos-delay="100">
+                <h1 
+                    className="text-4xl font-bold text-[#CDA45E] mb-12" 
+                    data-aos="fade-up" 
+                    data-aos-delay="100"
+                    data-aos-anchor="#testimonials-section"
+                >
                     Customers's Review
                 </h1>
 
-                <div className="swiperCon w-full" data-aos="fade-up" data-aos-delay="200">
+                <div 
+                    className="swiperCon w-full" 
+                    data-aos="fade-up" 
+                    data-aos-delay="200"
+                    data-aos-anchor="#testimonials-section"
+                >
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={30}
@@ -74,7 +87,6 @@ const Testimonials = () => {
                               <div className='eventCardCon flex justify-center items-center w-full min-h-[324px]'>
                                 <div className="eventCard bg-[#1a1814] p-8 rounded-lg border border-[#26231d] h-full flex flex-col justify-between hover:border-[#cda45e] transition-colors duration-300">
                                     <div className="relative">
-                                        {/* Quote Icon Decoration */}
                                         <span className="text-4xl text-[#cda45e]/30 absolute -top-4 -left-2">"</span>
                                         <p className="text-gray-300 italic leading-relaxed mb-8 relative z-10">
                                             {slide.comment}

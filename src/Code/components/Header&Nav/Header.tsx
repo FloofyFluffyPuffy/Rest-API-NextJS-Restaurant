@@ -9,9 +9,9 @@ const Header = () => {
     <div
       className={`header ${scroll > 50 ? " bg-black translate-y-0" : "translate-y-8 bg-black/50 "}`}
     >
-      <div className="logo text-2xl pl-12">Yamming</div>
+      <div className="logo text-2xl pl-12">Downtown Bistro</div>
       <Nav />
-      <div className="pr-12 justify-self-end">
+      <div className="pr-12 justify-self-end hover:text-black">
         <Btn name="BOOK A TABLE"/>
       </div>
       

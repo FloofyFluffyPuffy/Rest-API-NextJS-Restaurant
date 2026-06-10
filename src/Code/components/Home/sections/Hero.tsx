@@ -1,14 +1,29 @@
 "use client";
 import React from "react";
-import Btn from "../../utilities/Btn";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useContextData } from "../../../typescript/contexts/Provider";
 
 const Hero = () => {
   const { scroll, setScroll } = useContextData();
   return (
-    <div className="hero flex items-center justify-center min-h-screen text-center">
-      <div className="hero-content mt-[-34] bold uppercase tracking-widest">
+    <div className="hero flex items-center justify-center text-center">
+      
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        disablePictureInPicture
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/assets/homeHeroBgVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <div className="absolute inset-0 bg-black/40 z-5" />
+
+      <div className="hero-content mt-[-34px] font-bold uppercase tracking-widest z-10">
         <h1
           data-aos="fade-right"
           data-aos-delay="100"
@@ -26,7 +41,7 @@ const Hero = () => {
         >
           Downtown
         </h1>
-               <h1
+        <h1
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
@@ -35,18 +50,25 @@ const Hero = () => {
           Bistro
         </h1>
         <h2
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-delay="500"
           data-aos-anchor-placement="top-bottom"
           className="text-3xl text-amber-50 mt-8"
         >
           Made with <span className="text-[#CDA45E]">love</span>. Served with <span className="text-[#CDA45E]">Pride.</span>
         </h2>
-        <div
+        <div 
+          className="flex justify-center gap-4 mt-8 w-full"
           data-aos="zoom-in"
-          data-aos-delay="700"
+          data-aos-delay="400"
           data-aos-anchor-placement="top-bottom"
         >
+          <Link href="/menu" className="px-6 py-3 text-sm font-semibold tracking-widest text-[#CDA45E] uppercase transition-colors duration-300 border-2 border-[#CDA45E] hover:bg-[#CDA45E] hover:text-[#0c0b09]">
+            View Menu
+          </Link>
+          <Link href="/about" className="px-6 py-3 text-sm font-semibold tracking-widest text-[#CDA45E] uppercase transition-colors duration-300 border-2 border-[#CDA45E] hover:bg-[#CDA45E] hover:text-[#0c0b09]">
+            About Us
+          </Link>
         </div>
       </div>
     </div>

@@ -5,9 +5,9 @@ import Events from "../Code/components/Home/sections/Events";
 import Reservation from "../Code/components/Home/sections/Reservation/Revervation";
 import Testimonials from "../Code/components/Home/sections/Testimonials";
 import BestSellers from "@/Code/components/Home/sections/BestSellers/BestSellers";
-import Map from "../Code/components/utilities/Map";
-const HomePage = async () => {
-  console.log("server running successfully");
+import Gallery from "@/Code/components/Home/sections/Gallery/Gallery";
+import SectionHashScrollHandler from "@/Code/components/utilities/SectionHashScrollHandler";
+const HomePage = () => {
   // const fc = await getFoodBySlug('fried-chicken')
   return (
     <>
@@ -15,8 +15,10 @@ const HomePage = async () => {
       <BestSellers/>
       <WhyUs />
       <Testimonials/>
+      <Gallery/>
       <Events/>
       <Reservation/>
+      <SectionHashScrollHandler/>
     </>
   );
 };

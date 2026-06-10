@@ -27,7 +27,7 @@ const Menu = async () => {
       */}
       <div 
         id="menu-card-trigger"
-        className="w-[90%] MenuContentWrapper bg-[#1A1814] border-2 border-[#37332e] rounded-sm p-6 sm:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative -translate-y-32"
+        className="w-[90%] MenuContentWrapper bg-[#1A1814] border-2 border-[#37332e] rounded-sm p-6 sm:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative -mt-32"
         data-aos="fade-up"
       >
         
