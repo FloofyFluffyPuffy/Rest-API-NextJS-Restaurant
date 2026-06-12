@@ -6,22 +6,22 @@ const AboutHero = () => {
       {/* Optional: Subtle background overlay for texture */}
       <div className="relative z-10 max-w-4xl mx-auto space-y-4">
         <span 
-          className="block text-xl font-semibold tracking-[0.2em] uppercase text-[#A0A0A0]"
+          className="block text-xl font-semibold tracking-[0.2em] uppercase text-[#CDA45E]"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         >
           Our Identity
         </span>
-        <h1 
-          className='heroTitle text-4xl md:text-6xl font-bold tracking-wide text-[#CDA45E]'
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-        >
-          Crafting Moments, Flavor by Flavor.
-        </h1>
+                   <img 
+              src="/assets/logo.svg" 
+              alt="Downtown Bistro Logo" 
+              className="h-100 w-auto justify-self-center -mt-16 -mb-10"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom" 
+            />
         
         <h2 
-          className='text-lg md:text-xl text-[#A0A0A0] italic font-light leading-relaxed max-w-2xl mx-auto'
+          className='text-lg md:text-xl -mb-12 text-[#A0A0A0] italic font-light leading-relaxed max-w-2xl mx-auto'
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"

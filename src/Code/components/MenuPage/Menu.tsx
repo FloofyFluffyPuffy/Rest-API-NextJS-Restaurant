@@ -27,7 +27,7 @@ const Menu = async () => {
       */}
       <div 
         id="menu-card-trigger"
-        className="w-[90%] MenuContentWrapper bg-[#1A1814] border-2 border-[#37332e] rounded-sm p-6 sm:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative -mt-32"
+        className="w-[90%] MenuContentWrapper bg-[#1A1814] border-2 border-[#37332e] rounded-sm p-6 sm:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative -translate-y-32"
         data-aos="fade-up"
       >
         
@@ -41,15 +41,22 @@ const Menu = async () => {
           data-aos-anchor="#menu-card-trigger"
           data-aos-delay="100"
         >
-          
-          <h1
+           <img 
+              src="/assets/logo.svg" 
+              alt="Downtown Bistro Logo" 
+              className="h-44 w-full justify-self-center -mt-14 -mb-10"
+               data-aos="fade-up" 
+               data-aos-anchor="#menu-card-trigger"
+               data-aos-delay="200"
+            />
+          {/* <h1
             className="text-2xl sm:text-3xl font-serif font-bold text-[#CDA45E] text-center mb-6"
             data-aos="fade-up"
             data-aos-anchor="#menu-card-trigger"
             data-aos-delay="200"
           >
             Every Flavors For Every Tastes
-          </h1>
+          </h1> */}
 
           {/* Menu Body content */}
           <div 

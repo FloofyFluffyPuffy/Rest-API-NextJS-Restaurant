@@ -112,7 +112,7 @@ h1{
 .partners {
  @apply flex h-screen bg-cover bg-center bg-no-repeat bg-fixed;
   background-image:
-    
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
     url("/assets/partnerBg.jpg");
 }
 

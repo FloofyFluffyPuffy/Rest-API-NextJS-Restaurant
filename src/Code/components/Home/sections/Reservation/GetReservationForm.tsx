@@ -72,7 +72,7 @@ return (
                      className="cursor-pointer flex text-[18px] text-white hover:text-black rounded-full border-2 border-[#CDA45E]/70 py-2 px-6 transition-all duration-500
                      hover:bg-[#CDA45E] hover:scale-105"
                  >
-                     Book a Table
+                     Send Reservation
                  </button>
              </div>
 

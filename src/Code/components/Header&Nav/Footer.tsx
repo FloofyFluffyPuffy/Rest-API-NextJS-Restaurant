@@ -1,6 +1,9 @@
 "use client"
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from "next/navigation";
+import { useContextData } from "@/Code/typescript/contexts/Provider";
+import { navs } from "./Nav"; // Imports your dynamic nav array directly from your Nav file
 import { 
   FaFacebookF, 
   FaInstagram, 
@@ -13,21 +16,28 @@ import {
 } from 'react-icons/fa'
 
 const Footer = () => {
+  const pageName = usePathname();
+  const { setSectionHash } = useContextData();
+
   return (
     <footer className="bg-[#0f0e0c] text-gray-400 border-t border-[#26231e] pt-16 pb-8">
       {/* Main Footer Content */}
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         
         {/* Column 1: Brand & Socials */}
-        <div className="flex flex-col gap-4">
-          <span className="text-[#CDA45E] font-bold text-2xl tracking-widest uppercase font-serif">
-            Downtown Bistro
-          </span>
-          <p className="text-sm text-gray-400 leading-relaxed">
+        <div className="flex flex-col gap-6">
+          {/* Bigger, Wider Logo Container */}
+            <img 
+              src="/assets/logo.svg" 
+              alt="Downtown Bistro Logo" 
+              className="h-64 -mt-20 -mb-10 w-auto max-w-full object-contain shrink-0" 
+            />
+          <p className="text-sm text-gray-400 leading-relaxed text-center">
             Experience a culinary journey crafted with the finest ingredients and an unparalleled passion for flavor.
           </p>
+          
           {/* Social Icons */}
-          <div className="flex gap-3 mt-2">
+          <div className="flex gap-3">
             <a href="#" className="w-9 h-9 rounded-full bg-[#1c1a15] border border-[#37332e] flex items-center justify-center text-gray-400 hover:text-[#CDA45E] hover:border-[#CDA45E] transition-all duration-300">
               <FaFacebookF size={14} />
             </a>
@@ -42,32 +52,65 @@ const Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div className="flex flex-col gap-4">
-          <h4 className="text-white font-semibold text-base tracking-wider uppercase">Our Menu</h4>
+          <h4 className="text-white font-semibold text-base tracking-wider uppercase">Quick Links</h4>
           <ul className="flex flex-col gap-2 text-sm">
-            <li>
-              <Link href="/menu" className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors">
-                <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
-                Main Course
-              </Link>
-            </li>
-            <li>
-              <Link href="/menu" className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors">
-                <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
-                Desserts & Drinks
-              </Link>
-            </li>
-            <li>
-              <Link href="/reservations" className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors">
-                <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
-                Book A Table
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors">
-                <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
-                Our Story
-              </Link>
-            </li>
+            {navs.map((nav) => {
+              // Handle links that contain a dropdown submenu
+              if (nav.dropdown) {
+                return nav.dropdown.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      href={pageName === item.page ? item.path : item.page}
+                      className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors"
+                      onClick={(e) => {
+                        // ONLY smooth scroll and prevent default if we are ALREADY on that target page
+                        if (pageName === item.page) {
+                          e.preventDefault();
+                          const targetElement = document.querySelector(item.path);
+                          if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: "smooth" });
+                          }
+                        }
+                        // If we are NOT on the correct page, do NOT call e.preventDefault(). 
+                        // Let Next.js natively navigate to the href link!
+                        else {
+                          setSectionHash(item.path);
+                        }
+                      }}
+                    >
+                      <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
+                      {item.name}
+                    </Link>
+                  </li>
+                ));
+              }
+
+              // Handle top-level static links (Home, Menu, About, etc.)
+              const targetPage = `/${nav.name === "Home" ? "" : nav.name.toLocaleLowerCase()}`;
+              return (
+                <li key={nav.id}>
+                  <Link
+                    href={targetPage}
+                    className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors"
+                    onClick={(e) => {
+                      // Smooth scroll to element if matching section anchor is on current page
+                      if (pageName === targetPage) {
+                        e.preventDefault();
+                        const targetElement = document.getElementById(nav.target);
+                        if (targetElement) {
+                          targetElement.scrollIntoView({ behavior: "smooth" });
+                        }
+                      } else {
+                        setSectionHash(`#${nav.target}`);
+                      }
+                    }}
+                  >
+                    <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
+                    {nav.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -105,18 +148,18 @@ const Footer = () => {
 
       </div>
 
-{/* Map Segment */}
-<div className="max-w-6xl mx-auto px-6 mt-10">
-  <div className="w-full h-64 rounded-xl overflow-hidden border border-[#26231e] bg-[#161410] p-1">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3263.2222446989836!2d-106.53914862511826!3d35.12612706026909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87227557938908eb%3A0x723dd3cf63dbb051!2s3828%20Piermont%20Dr%20NE%2C%20Albuquerque%2C%20NM%2087111%2C%20USA!5e0!3m2!1sen!2s!4v1780742549204!5m2!1sen!2s" 
-      className="w-full h-full rounded-lg"
-      allowFullScreen={true}
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-  </div>
-</div>
+      {/* Map Segment */}
+      <div className="max-w-6xl mx-auto px-6 mt-10">
+        <div className="w-full h-64 rounded-xl overflow-hidden border border-[#26231e] bg-[#161410] p-1">
+          <iframe 
+            src="https://maps.google.com/maps?q=3828%20Piermont%20Dr%20NE,%20Albuquerque,%20NM%2087111&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            className="w-full h-full rounded-lg border-0"
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
 
       {/* Bottom Copyright Strip */}
       <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-[#26231e] flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
