@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2: Quick Links */}
-        <div className="flex flex-col gap-4">
+        <div className="hidden md:flex flex-col gap-4">
           <h4 className="text-[#CDA45E] font-semibold text-base tracking-wider uppercase">Quick Links</h4>
           <ul className="flex flex-col gap-2 text-sm">
             {navs.map((nav) => {

@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { HiMenu, HiX } from "react-icons/hi";
 import { useContextData } from "@/Code/typescript/contexts/Provider";
 export const navs = [
   {
@@ -39,24 +40,50 @@ export const navs = [
 const Nav = () => {
   const [navList, setNavList] = useState(navs);
   const [activeDropdownId, setActiveDropdownId] = useState<number | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const pageName = usePathname();
-  const {sectionHash,setSectionHash} = useContextData()
+  const { sectionHash, setSectionHash } = useContextData();
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setActiveDropdownId(null);
+        setMobileOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
   const handleDropdownToggle = (id: number) => {
     if (activeDropdownId === id) {
       setActiveDropdownId(null);
-      // this like close and open when clicking again
     } else {
       setActiveDropdownId(id);
+    }
+  };
+
+  const mobileMenuItems = [
+    { id: 1, name: "Home", page: "/" },
+    { id: 2, name: "Menu", page: "/menu" },
+    { id: 3, name: "About", page: "/about" },
+    { id: 40, name: "Booking", page: "/", path: "#reservation" },
+    { id: 41, name: "Catering", page: "/", path: "#events" },
+    { id: 42, name: "Chefs", page: "/about", path: "#chefs" },
+    { id: 43, name: "Gallery", page: "/", path: "#gallery" },
+  ];
+
+  const handleMobileItemClick = (item: { page: string; path?: string }, event: React.MouseEvent<HTMLAnchorElement>) => {
+    setMobileOpen(false);
+    if (item.path && pageName === item.page) {
+      event.preventDefault();
+      const targetElement = document.querySelector(item.path);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (item.path) {
+      setSectionHash(item.path);
     }
   };
 

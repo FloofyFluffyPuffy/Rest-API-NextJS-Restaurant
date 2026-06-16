@@ -79,7 +79,7 @@ h1{
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); 
 }
 .aboutHero{
-    @apply h-[90vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+    @apply h-[100vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
     url("/assets/imgi_55_about-bg.755e6d02.jpg"); 
