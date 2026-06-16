@@ -64,7 +64,7 @@ const Events = () => {
                   <img  
                     src={event.image} 
                     alt={event.title} 
-                    className="aboutImg w-full md:w-[520px] h-auto md:h-80 ml-0 md:ml-6 object-cover"
+                    className="aboutImg w-130 h-80 ml-6" 
                     data-aos="fade-right"
                   />
                   <div className="slideContent text-white" data-aos="fade-left">

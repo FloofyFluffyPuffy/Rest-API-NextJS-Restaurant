@@ -9,7 +9,7 @@ const BackTopBtn = () => {
   };
   return (
     <a
-      className={`backTopBtn hidden sm:inline-flex ${scroll < 50 ? "opacity-0" : "opacity-100"}`}
+      className={`backTopBtn ${scroll < 50 ? "opacity-0" : "opacity-100"}`}
       onClick={backToTop}
     >
       <FaArrowUpLong />

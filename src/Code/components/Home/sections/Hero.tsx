@@ -28,7 +28,7 @@ const Hero = () => {
           data-aos="fade-right"
           data-aos-delay="100"
           data-aos-anchor-placement="top-bottom"
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-amber-50"
+          className="text-9xl text-amber-50"
         >
           Welcome to
         </h1>
@@ -37,7 +37,7 @@ const Hero = () => {
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#CDA45E]"
+          className="text-9xl text-[#CDA45E]"
         >
           Downtown
         </h1>
@@ -45,7 +45,7 @@ const Hero = () => {
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#CDA45E]"
+          className="text-9xl text-[#CDA45E]"
         >
           Bistro
         </h1>
@@ -53,7 +53,7 @@ const Hero = () => {
           data-aos="fade-right"
           data-aos-delay="500"
           data-aos-anchor-placement="top-bottom"
-          className="text-base sm:text-lg md:text-2xl lg:text-3xl text-amber-50 mt-4 sm:mt-6 md:mt-8"
+          className="text-3xl text-amber-50 mt-8"
         >
           Made with <span className="text-[#CDA45E]">love</span>. Served with <span className="text-[#CDA45E]">Pride.</span>
         </h2>
