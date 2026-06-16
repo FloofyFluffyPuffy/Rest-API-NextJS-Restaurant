@@ -52,7 +52,7 @@ const Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div className="flex flex-col gap-4">
-          <h4 className="text-white font-semibold text-base tracking-wider uppercase">Quick Links</h4>
+          <h4 className="text-[#CDA45E] font-semibold text-base tracking-wider uppercase">Quick Links</h4>
           <ul className="flex flex-col gap-2 text-sm">
             {navs.map((nav) => {
               // Handle links that contain a dropdown submenu
@@ -116,7 +116,7 @@ const Footer = () => {
 
         {/* Column 3: Contact Info */}
         <div className="flex flex-col gap-4">
-          <h4 className="text-white font-semibold text-base tracking-wider uppercase">Contact Us</h4>
+          <h4 className="text-[#CDA45E] font-semibold text-base tracking-wider uppercase">Contact Us</h4>
           <ul className="flex flex-col gap-3 text-sm">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-[#CDA45E] mt-1 shrink-0" size={16} />
@@ -124,7 +124,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-[#CDA45E] shrink-0" size={14} />
-              <span className="text-white font-medium">+1 (555) 123-4567</span>
+              <span className="text-[#CDA45E] font-medium">+1 (555) 123-4567</span>
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-[#CDA45E] shrink-0" size={14} />
@@ -135,11 +135,11 @@ const Footer = () => {
 
         {/* Column 4: Hours */}
         <div className="flex flex-col gap-4">
-          <h4 className="text-white font-semibold text-base tracking-wider uppercase">Opening Hours</h4>
+          <h4 className="text-[#CDA45E] font-semibold text-base tracking-wider uppercase">Opening Hours</h4>
           <div className="flex gap-3 items-start text-sm bg-[#161410] p-4 rounded-lg border border-[#26231e]">
             <FaClock className="text-[#CDA45E] mt-1 shrink-0" size={16} />
             <div className="flex flex-col gap-1">
-              <span className="text-white font-medium">Monday - Sunday</span>
+              <span className="text-[#CDA45E] font-medium">Monday - Sunday</span>
               <span className="text-xs text-gray-400">07:00 AM - 11:00 PM</span>
               <span className="text-[11px] text-[#CDA45E] mt-1">Happy Hour: 4PM - 6PM</span>
             </div>
