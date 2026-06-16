@@ -2,11 +2,11 @@ import React from 'react'
 
 const AboutHero = () => {
   return (
-    <div className='aboutHero relative flex flex-col items-center justify-center  px-4 py-16 text-center bg-[#0c0b09] overflow-hidden'>
+    <div className='aboutHero relative flex flex-col items-center justify-center px-4 py-12 sm:py-16 text-center bg-[#0c0b09] overflow-hidden'>
       {/* Optional: Subtle background overlay for texture */}
       <div className="relative z-10 max-w-4xl mx-auto space-y-4">
         <span 
-          className="block text-xl font-semibold tracking-[0.2em] uppercase text-[#CDA45E]"
+          className="block text-sm sm:text-base md:text-xl font-semibold tracking-[0.15em] uppercase text-[#CDA45E]"
           data-aos="fade-up"
           data-aos-anchor-placement="top-bottom"
         >
@@ -15,13 +15,13 @@ const AboutHero = () => {
                    <img 
               src="/assets/logo.svg" 
               alt="Downtown Bistro Logo" 
-              className="h-100 w-auto justify-self-center -mt-16 -mb-10"
+              className="h-20 sm:h-28 md:h-40 w-auto justify-self-center -mt-12 sm:-mt-16 -mb-8 sm:-mb-10"
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom" 
             />
         
         <h2 
-          className='text-lg md:text-xl -mb-12 text-[#A0A0A0] italic font-light leading-relaxed max-w-2xl mx-auto'
+          className='text-sm sm:text-base md:text-lg lg:text-xl -mb-8 md:-mb-12 text-[#A0A0A0] italic font-light leading-relaxed max-w-xl sm:max-w-2xl mx-auto'
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"

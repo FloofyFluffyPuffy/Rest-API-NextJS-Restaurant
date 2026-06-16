@@ -6,7 +6,7 @@ const Chefs = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <span 
-            className="text-xs font-semibold tracking-widest text-amber-400 uppercase"
+            className="text-xs font-semibold tracking-widest text-[#CDA45E] uppercase"
             data-aos="fade-up"
           >
             Culinary Team
@@ -19,7 +19,7 @@ const Chefs = () => {
             Meet Our Chefs
           </h2>
           <div 
-            className="mx-auto mt-4 h-0.5 w-16 bg-amber-400"
+            className="mx-auto mt-4 h-0.5 w-16 bg-[#CDA45E]"
             data-aos="zoom-in"
             data-aos-delay="200"
           ></div>
@@ -37,7 +37,7 @@ const Chefs = () => {
             </div>
             <div className="space-y-1">
               <h3 className="text-xl font-serif text-white">Julian Mercer</h3>
-              <p className="text-sm font-medium text-amber-400 uppercase tracking-wider">Executive Chef / Partner</p>
+              <p className="text-sm font-medium text-[#CDA45E] uppercase tracking-wider">Executive Chef / Partner</p>
               <p className="pt-2 text-sm text-stone-400 leading-relaxed">
                 Julian oversees daily operations, blending classical background foundations with innovative techniques to elevate every plate.
               </p>
@@ -55,7 +55,7 @@ const Chefs = () => {
             </div>
             <div className="space-y-1">
               <h3 className="text-xl font-serif text-white"> Marcus Vance</h3>
-              <p className="text-sm font-medium text-amber-400 uppercase tracking-wider">Head Chef</p>
+              <p className="text-sm font-medium text-[#CDA45E] uppercase tracking-wider">Head Chef</p>
               <p className="pt-2 text-sm text-stone-400 leading-relaxed">
                 With over fifteen years in Michelin-starred kitchens, Marcus guides our culinary direction with an emphasis on locally sourced heritage ingredients.
               </p>
@@ -73,7 +73,7 @@ const Chefs = () => {
             </div>
             <div className="space-y-1">
               <h3 className="text-xl font-serif text-white">Elena Rostova</h3>
-              <p className="text-sm font-medium text-amber-400 uppercase tracking-wider">Pastry Chef</p>
+              <p className="text-sm font-medium text-[#CDA45E] uppercase tracking-wider">Pastry Chef</p>
               <p className="pt-2 text-sm text-stone-400 leading-relaxed">
                 Elena brings an artistic structural eye to our dessert menu, closing out the dining experience with delicate textures and balanced sweetness.
               </p>

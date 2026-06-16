@@ -41,13 +41,13 @@ const Menu = async () => {
           data-aos-anchor="#menu-card-trigger"
           data-aos-delay="100"
         >
-           <img 
+            <img 
               src="/assets/logo.svg" 
               alt="Downtown Bistro Logo" 
-              className="h-44 w-full justify-self-center -mt-14 -mb-10"
-               data-aos="fade-up" 
-               data-aos-anchor="#menu-card-trigger"
-               data-aos-delay="200"
+              className="h-20 sm:h-32 md:h-44 w-auto justify-self-center -mt-8 sm:-mt-12 md:-mt-14 -mb-6 sm:-mb-10"
+              data-aos="fade-up" 
+              data-aos-anchor="#menu-card-trigger"
+              data-aos-delay="200"
             />
           {/* <h1
             className="text-2xl sm:text-3xl font-serif font-bold text-[#CDA45E] text-center mb-6"

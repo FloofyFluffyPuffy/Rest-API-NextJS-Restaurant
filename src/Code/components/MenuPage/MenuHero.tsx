@@ -9,7 +9,7 @@ const MenuHero = () => {
           data-aos="slide-right"
           data-aos-delay="100"
           data-aos-anchor-placement="top-bottom"
-          className="text-9xl text-[#CDA45E] mt-8"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#CDA45E] mt-4 sm:mt-6 md:mt-8"
         >
           Downtown Bistro's
         </h1>
@@ -18,7 +18,7 @@ const MenuHero = () => {
           data-aos="slide-right"
           data-aos-delay="300"
           data-aos-anchor-placement="top-bottom"
-          className="text-9xl text-amber-50"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-amber-50"
         >
           Culinary Menu
         </h1>
