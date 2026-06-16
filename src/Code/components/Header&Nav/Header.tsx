@@ -18,16 +18,16 @@ const Header = () => {
     <div
       className={`header ${scroll > 50 ? " bg-black translate-y-0" : "translate-y-8 bg-black/50 "}`}
     >
-      <div className="logo flex text-[#CDA45E] items-center gap-2 italic text-2xl pl-12">
+      <div className="logo flex text-[#CDA45E] items-center gap-2 italic text-xl lg:text-2xl pl-4 lg:pl-12 justify-center sm:justify-start">
         <span>Downtown</span>
-        <img src="/assets/logo.svg" alt="Logo" className="-mx-3 h-14 w-auto inline-block" />
+        <img src="/assets/logo.svg" alt="Logo" className="-mx-3 h-10 sm:h-14 w-auto inline-block" />
         <span>Bistro</span>
       </div>
       <Nav />
-      <div className="pr-12 justify-self-end">
+      <div className="pr-4 lg:pr-12 justify-self-center lg:justify-self-end">
         <Link
           href={pageName === reservationPage ? reservationPath : reservationPage}
-          className="inline-block text-white border-2 border-[#CDA45E] bg-transparent rounded-full px-6 py-2 transition-all duration-300 hover:bg-[#CDA45E] hover:text-black cursor-pointer font-medium text-md"
+          className="inline-block text-white border-2 border-[#CDA45E] bg-transparent rounded-full px-4 py-2 sm:px-6 transition-all duration-300 hover:bg-[#CDA45E] hover:text-black cursor-pointer font-medium text-sm sm:text-md"
           onClick={(e) => {
             // ONLY smooth scroll and prevent default if we are ALREADY on that target page
             if (pageName === reservationPage) {

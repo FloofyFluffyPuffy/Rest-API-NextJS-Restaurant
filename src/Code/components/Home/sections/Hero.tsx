@@ -23,12 +23,12 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-black/40 z-5" />
 
-      <div className="hero-content mt-[-34px] font-bold uppercase tracking-widest z-10">
+      <div className="hero-content mt-[-34px] px-4 sm:px-6 font-bold uppercase tracking-widest z-10">
         <h1
           data-aos="fade-right"
           data-aos-delay="100"
           data-aos-anchor-placement="top-bottom"
-          className="text-9xl text-amber-50"
+          className="text-4xl sm:text-6xl lg:text-9xl text-amber-50"
         >
           Welcome to
         </h1>
@@ -37,7 +37,7 @@ const Hero = () => {
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
-          className="text-9xl text-[#CDA45E]"
+          className="text-4xl sm:text-6xl lg:text-9xl text-[#CDA45E]"
         >
           Downtown
         </h1>
@@ -45,7 +45,7 @@ const Hero = () => {
           data-aos="fade-right"
           data-aos-delay="200"
           data-aos-anchor-placement="top-bottom"
-          className="text-9xl text-[#CDA45E]"
+          className="text-4xl sm:text-6xl lg:text-9xl text-[#CDA45E]"
         >
           Bistro
         </h1>
@@ -53,7 +53,7 @@ const Hero = () => {
           data-aos="fade-right"
           data-aos-delay="500"
           data-aos-anchor-placement="top-bottom"
-          className="text-3xl text-amber-50 mt-8"
+          className="text-xl sm:text-2xl lg:text-3xl text-amber-50 mt-8"
         >
           Made with <span className="text-[#CDA45E]">love</span>. Served with <span className="text-[#CDA45E]">Pride.</span>
         </h2>

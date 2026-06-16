@@ -35,7 +35,7 @@ const HomeMenu = async () => {
   const menuFoodTypeCon = "grid grid-cols-1 gap-x-12 gap-y-8 lg:grid-cols-2"
   
   return (
-    <div className="bg-[#1A1814] min-h-screen p-8">
+    <div className="bg-[#1A1814] min-h-screen px-4 py-8 sm:px-8">
       <div className="SectionSB flex flex-row items-center"  data-aos="fade-up">
         <h2 className="text-[#A0A0A0]">
           OUR MENU

@@ -62,7 +62,7 @@ const Nav = () => {
 
   return (
     <nav id="navbar" className="navbar" ref={navRef}>
-      <ul className="navBtn flex items-center space-x-4">
+      <ul className="navBtn flex flex-wrap justify-center gap-3 items-center">
         {navList.map((nav) => {
           
           if (nav.dropdown) {

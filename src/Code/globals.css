@@ -85,7 +85,7 @@ h1{
     url("/assets/imgi_55_about-bg.755e6d02.jpg"); 
 }
 .menuHero {
-  @apply h-[80vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+  @apply h-[100vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
     url("/assets/gallery-1.jpg"); 
@@ -150,6 +150,148 @@ h1{
 .aboutImg:hover {
   @apply scale-105;
 }
+
+.hero-content {
+  @apply px-4 sm:px-6;
+}
+
+.menuBody {
+  @apply grid grid-cols-1 gap-y-4;
+}
+
+.about-content {
+  @apply w-full max-w-6xl;
+}
+
+@media (max-width: 430px) {
+  .topBar {
+    @apply hidden;
+  }
+
+  .header {
+    @apply grid grid-cols-1 gap-3 px-4 py-2 h-auto;
+  }
+
+  .logo {
+    @apply justify-center ml-0 text-lg;
+  }
+
+  .navBtn {
+    @apply flex flex-wrap justify-center gap-3 px-2;
+  }
+
+  .btn {
+    @apply px-4 py-2 text-[10px];
+  }
+
+  .backTopBtn {
+    @apply right-4 bottom-4 w-10 h-10;
+  }
+
+  .sectionHeading {
+    @apply text-xs tracking-[0.35em];
+  }
+
+  .hero,
+  .aboutHero,
+  .menuHero,
+  .MenuCon,
+  .chefs,
+  .partners,
+  .about,
+  .events,
+  .whyUs {
+    @apply min-h-[70vh];
+    background-attachment: scroll;
+  }
+
+  .whyUsList {
+    @apply grid grid-cols-1 gap-4 pt-8 mx-2 my-2;
+  }
+
+  .whyUsCard {
+    @apply h-auto p-4;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .topBar {
+    @apply px-4;
+  }
+
+  .header {
+    @apply grid grid-cols-3 gap-4 px-6 h-16;
+  }
+
+  .logo {
+    @apply pl-4 text-xl;
+  }
+
+  .navBtn {
+    @apply gap-4;
+  }
+
+  .btn {
+    @apply px-5 py-2 text-[11px];
+  }
+
+  .backTopBtn {
+    @apply right-6 bottom-6 w-11 h-11;
+  }
+
+  .hero,
+  .aboutHero,
+  .menuHero,
+  .MenuCon,
+  .chefs,
+  .partners,
+  .about,
+  .events,
+  .whyUs {
+    @apply min-h-[80vh];
+    background-attachment: scroll;
+  }
+
+  .whyUsList {
+    @apply grid grid-cols-2 gap-6 pt-10 mx-4 my-4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .topBar {
+    @apply px-6;
+  }
+
+  .header {
+    @apply grid-cols-3 px-10 h-16;
+  }
+
+  .logo {
+    @apply pl-12;
+  }
+
+  .btn {
+    @apply px-6 py-2;
+  }
+
+  .hero,
+  .aboutHero,
+  .menuHero,
+  .MenuCon,
+  .chefs,
+  .partners,
+  .about,
+  .events,
+  .whyUs {
+    @apply min-h-screen;
+    background-attachment: fixed;
+  }
+
+  .whyUsList {
+    @apply grid grid-cols-3 gap-8;
+  }
+}
+
 /* ------------------- */
 
 /* :root {
