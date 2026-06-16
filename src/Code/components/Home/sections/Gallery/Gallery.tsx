@@ -5,12 +5,11 @@ const Gallery = async () => {
     const galleryData = await getGallery() 
     console.log(galleryData)
   return (
-    <div id="gallery" className="gallery bg-[#0C0B09] text-amber-50 p-8" 
+    <div id="gallery" className="gallery bg-[#0C0B09] text-amber-50 px-4 py-8 sm:px-8" 
         /*
         no height cs so it grow naturally
-        p-8 so the side dont touch the screen
-        no py but only pb so it look more even
-         */>
+        px-4 sm:px-8 so the side dont touch the screen
+        */>
           <div 
             className="SectionSB flex flex-row items-center " 
             data-aos="fade-up"
