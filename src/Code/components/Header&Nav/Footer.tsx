@@ -30,7 +30,7 @@ const Footer = () => {
             <img 
               src="/assets/logo.svg" 
               alt="Downtown Bistro Logo" 
-              className="h-64 -mt-20 -mb-10 w-auto max-w-full object-contain shrink-0" 
+              className="h-32 sm:h-64 -mt-10 sm:-mt-20 -mb-4 sm:-mb-10 w-auto max-w-full object-contain shrink-0" 
             />
           <p className="text-sm text-gray-400 leading-relaxed text-center">
             Experience a culinary journey crafted with the finest ingredients and an unparalleled passion for flavor.
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2: Quick Links */}
-        <div className="flex flex-col gap-4">
+        <div className="hidden md:flex flex-col gap-4">
           <h4 className="text-[#CDA45E] font-semibold text-base tracking-wider uppercase">Quick Links</h4>
           <ul className="flex flex-col gap-2 text-sm">
             {navs.map((nav) => {

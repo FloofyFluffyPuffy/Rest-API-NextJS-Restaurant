@@ -5,7 +5,7 @@
       <div className="about flex justify-center">
         <div
           data-aos="fade-up"
-          className=" about-content grid grid-cols-2 m-3 gap-4 text-white w-[90%] "
+          className="about-content grid grid-cols-1 lg:grid-cols-2 m-3 gap-4 text-white w-full max-w-6xl"
         >
           <div className="flex about-text justify-center flex-col">
             <h1

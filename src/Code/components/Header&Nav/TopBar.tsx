@@ -20,7 +20,7 @@ const TopBar = () => {
 
   return (
     <div
-      className={`h-10 fixed top-0 left-0 right-0 flex items-center gap-6 px-6 transition-transform duration-300 ease-in-out z-50 
+      className={`h-10 fixed top-0 left-0 right-0 flex items-center gap-3 sm:gap-6 px-3 sm:px-6 transition-transform duration-300 ease-in-out z-50 
         ${scroll > 50 ? "-translate-y-full" : "translate-y-0"}`}
     >
       {/* translate-y-full mean move it up visually by it full height */}

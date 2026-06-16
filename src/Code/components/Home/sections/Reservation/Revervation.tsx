@@ -2,8 +2,8 @@ import React from 'react'
 import GetReservationForm from './GetReservationForm'
 const Reservation = () => {
   return (
-    <div id='reservation' className='reservation bg-[#0C0B09] min-h-screen p-8'>
-      <div className="SectionSB flex flex-row items-center"  data-aos="fade-up">
+    <div id='reservation' className='reservation bg-[#0C0B09] min-h-screen px-4 py-8 sm:px-8'>
+      <div className="SectionSB flex flex-col sm:flex-row items-start sm:items-center gap-3"  data-aos="fade-up">
         <h2  className="sectionHeading">
           RESERVATION
         </h2>

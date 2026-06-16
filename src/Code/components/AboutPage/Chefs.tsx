@@ -37,7 +37,7 @@ const Chefs = () => {
             </div>
             <div className="space-y-1">
               <h3 className="text-xl font-serif text-white">Julian Mercer</h3>
-              <p className="text-sm font-medium text-amber-400 uppercase tracking-wider">Executive Chef / Partner</p>
+              <p className="text-sm font-medium text-[#CDA45E] uppercase tracking-wider">Executive Chef / Partner</p>
               <p className="pt-2 text-sm text-stone-400 leading-relaxed">
                 Julian oversees daily operations, blending classical background foundations with innovative techniques to elevate every plate.
               </p>
