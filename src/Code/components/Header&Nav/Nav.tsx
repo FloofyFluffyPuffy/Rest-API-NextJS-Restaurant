@@ -99,7 +99,7 @@ const Nav = () => {
                       <Link
                         key={item.id}
                         // This evaluates the condition and returns just the string path to the href attribute
-                        href={pageName === item.page ? item.path : item.page}
+                        href={ item.name === "Booking" ? item.path : pageName === item.page ? item.path : item.page}
                         className="block px-4 py-2.5 text-sm text-white hover:bg-neutral-900 hover:text-[#CDA45E] transition-colors duration-150 cursor-pointer"
                         onClick={async (e) => {
                           // ONLY smooth scroll and prevent default if we are ALREADY on that target page
@@ -113,7 +113,7 @@ const Nav = () => {
                           }
                           // If we are NOT on the correct page, do NOT call e.preventDefault(). 
                           // Let Next.js natively navigate to the href link!
-                          else {
+                          else if (item.name !== "Booking") {
                               setSectionHash(item.path)
                             }}}
                       >
