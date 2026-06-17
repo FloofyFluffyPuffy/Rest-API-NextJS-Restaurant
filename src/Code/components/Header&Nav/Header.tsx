@@ -74,7 +74,7 @@ const Header = () => {
         <div className="justify-self-end relative flex flex-col items-end">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="text-[#CDA45E] p-2 focus:outline-none text-md font-medium"
+            className="text-[#CDA45E] text-2xl p-2 focus:outline-none text-md font-medium"
           >
             {isOpen ? "✕" : "☰"}
           </button>
