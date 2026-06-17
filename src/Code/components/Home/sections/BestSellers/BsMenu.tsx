@@ -17,11 +17,11 @@ const BsMenu = ({ foods = [] }: BsMenuProps) => {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
+        autoplay={{ delay: 1700, disableOnInteraction: false }}
+        // pagination={{
+        //   clickable: true,
+        //   dynamicBullets: true,
+        // }}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
