@@ -115,7 +115,7 @@ const Events = () => {
                         <ul className="space-y-3 sm:space-y-4">
                           {event.features.map((feature, index) => (
                             <li key={index} className="flex items-start gap-3">
-                              <span className="text-[#d4af37] text-lg leading-none">✔</span>
+                              <span className="text-[#CDA45E] text-lg leading-none">✔</span>
                               <span className="text-xs sm:text-sm text-gray-200">{feature}</span>
                             </li>
                           ))}
@@ -137,7 +137,7 @@ const Events = () => {
         <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 md:p-12">
           {/* Close Button */}
           <button 
-            className="absolute top-6 right-6 text-white/70 hover:text-white text-3xl font-light z-50 transition-colors"
+            className="absolute top-6 right-6 text-white/70 cursor-pointer hover:text-white text-3xl font-light z-50 transition-colors"
             onClick={() => setActiveImage(null)}
           >
             ✕

@@ -29,7 +29,6 @@ const Menu = async () => {
         id="menu-card-trigger"
         className="w-full max-w-6xl MenuContentWrapper bg-[#1A1814] border-2 border-[#37332e] rounded-sm p-6 sm:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative -translate-y-24 sm:-translate-y-32"
         data-aos="fade-up"
-        data-aos-anchor-placement="top-bottom"
       >
         
         {/* Subtle decorative inner frame border for realism */}
@@ -45,7 +44,7 @@ const Menu = async () => {
            <img 
               src="/assets/logo.svg" 
               alt="Downtown Bistro Logo" 
-              className="h-44 w-full justify-self-center -mt-14 -mb-10"
+              className="h-40 w-full justify-self-center -mt-12 -mb-10"
                data-aos="fade-up" 
                data-aos-anchor="#menu-card-trigger"
                data-aos-delay="200"

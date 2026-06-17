@@ -18,8 +18,6 @@ const Header = () => {
     window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
   }, []);
-
-  const reservationPage = "/";
   const reservationPath = "#reservation";
 
   return (
@@ -34,19 +32,15 @@ const Header = () => {
       {/* 1. BOOK A TABLE BUTTON */}
       <div className={`flex items-center ${isMobile ? "justify-start" : "order-3 justify-end"}`}>
         <Link
-          href={pageName === reservationPage ? reservationPath : reservationPage}
+          href="#reservation"
           className={`inline-block text-white border-[#CDA45E] font-bold border-2 bg-transparent rounded-full px-3 py-1.5 sm:px-6 transition-all duration-300 hover:bg-[#CDA45E] hover:text-black cursor-pointer  text-[11px] sm:text-md whitespace-nowrap
   ${!isMobile ? "text-2xl" : ""}`}
           onClick={(e) => {
-            if (pageName === reservationPage) {
               e.preventDefault();
               const targetElement = document.querySelector(reservationPath);
               if (targetElement) {
                 targetElement.scrollIntoView({ behavior: "smooth" });
               }
-            } else {
-              setSectionHash(reservationPath);
-            }
             if (isMobile) setIsOpen(false);
           }}
         >
