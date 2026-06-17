@@ -69,11 +69,11 @@ const Testimonials = () => {
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={30}
-                        autoplay={{ delay: 5000, disableOnInteraction: false }}
-                        pagination={{
-                            clickable: true,
-                            dynamicBullets: true,
-                        }}
+                        autoplay={{ delay: 1800, disableOnInteraction: false }}
+                        // pagination={{
+                        //     clickable: true,
+                        //     dynamicBullets: true,
+                        // }}
                         breakpoints={{
                             640: { slidesPerView: 1 },
                             768: { slidesPerView: 2 },

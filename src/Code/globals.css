@@ -73,13 +73,13 @@ h1{
     url("/assets/homeHero.jpg"); 
 }
 .aboutHero{
-    @apply h-[100vh] sm:h-[60vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+    @apply lg:h-screen md:h-screen sm:h-[30vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
     url("/assets/imgi_55_about-bg.755e6d02.jpg"); 
 }
 .menuHero {
-  @apply h-[100vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+  @apply lg:h-screen md:h-screen sm:h-[20vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
     url("/assets/gallery-1.jpg"); 

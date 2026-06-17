@@ -35,6 +35,7 @@ const Gallery2 = ({ galleryData = [] }: GalleryProp) => {
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           modules={[Pagination, Autoplay]}
           className="sm:hidden"
+          id="mobile-gallery-container"
           onClick={(swiper) => {
             const clickedIndex = swiper.clickedIndex;
             if (typeof clickedIndex !== 'undefined' && validItems[clickedIndex]) {
@@ -46,7 +47,13 @@ const Gallery2 = ({ galleryData = [] }: GalleryProp) => {
             const imageUrl = item.acf.image
             return (
               <SwiperSlide key={item.id || index}>
-                <div className="overflow-hidden rounded-lg shadow-sm aspect-square bg-gray-100 group cursor-pointer">
+                <div 
+                  className="overflow-hidden rounded-lg shadow-sm aspect-square bg-gray-100 group cursor-pointer"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 50}
+                  data-aos-anchor="#mobile-gallery-container"
+                  data-aos-anchor-placement="top-bottom"
+                >
                   <img
                     src={imageUrl}
                     alt={`Gallery image ${index + 1}`}
@@ -59,7 +66,10 @@ const Gallery2 = ({ galleryData = [] }: GalleryProp) => {
           })}
         </Swiper>
       ) : (
-        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div 
+          id="desktop-gallery-grid" 
+          className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
           {validItems.map((item, index) => {
             const imageUrl = item.acf.image
 
@@ -68,6 +78,10 @@ const Gallery2 = ({ galleryData = [] }: GalleryProp) => {
                 key={item.id || index}
                 className="overflow-hidden rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 aspect-square bg-gray-100 group cursor-pointer"
                 onClick={() => setActiveImage(imageUrl)}
+                data-aos="fade-up"
+                data-aos-delay={index * 50}
+                data-aos-anchor="#desktop-gallery-grid"
+                data-aos-anchor-placement="top-bottom"
               >
                 <img
                   src={imageUrl}
@@ -83,17 +97,25 @@ const Gallery2 = ({ galleryData = [] }: GalleryProp) => {
 
       {/* Lightbox Modal */}
       {activeImage && (
-        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 md:p-12">
+        <div 
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 md:p-12"
+          data-aos="fade-in"
+          data-aos-duration="300"
+        >
           {/* Close Button */}
           <button 
-            className="absolute top-6 right-6 text-white/70 hover:text-white text-3xl font-light z-50 transition-colors"
+            className="absolute cursor-pointer top-6 right-6 text-white/70 hover:text-white text-3xl font-light z-50 transition-colors"
             onClick={() => setActiveImage(null)}
           >
             ✕
           </button>
 
           {/* Centered Image Container with Fixed Constraints */}
-          <div className="relative max-w-5xl max-h-[85vh] w-full h-full flex items-center justify-center z-40">
+          <div 
+            className="relative max-w-5xl max-h-[85vh] w-full h-full flex items-center justify-center z-40"
+            data-aos="zoom-in"
+            data-aos-duration="300"
+          >
             <img
               src={activeImage}
               alt="Enlarged view"

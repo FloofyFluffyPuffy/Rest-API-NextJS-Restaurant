@@ -18,7 +18,7 @@ const Menu = async () => {
   
   return (
     // Base wrapper creates the background environment for the menu to sit on
-    <div className="MenuCon bg-[#12110e] min-h-screen py-12 px-4 flex justify-center items-center" >
+    <div className="MenuCon bg-[#12110e] min-h-screen py-8 px-4 flex justify-center items-center" >
       
       {/* The Menu Board Container (Now serving as the main AOS trigger anchor):
         - w-90% keeps it constrained (roughly 10% tighter than full wide screens)
@@ -29,6 +29,7 @@ const Menu = async () => {
         id="menu-card-trigger"
         className="w-full max-w-6xl MenuContentWrapper bg-[#1A1814] border-2 border-[#37332e] rounded-sm p-6 sm:p-10 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative -translate-y-24 sm:-translate-y-32"
         data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
       >
         
         {/* Subtle decorative inner frame border for realism */}

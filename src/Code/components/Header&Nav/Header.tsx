@@ -26,7 +26,7 @@ const Header = () => {
     <div
       className={`fixed right-0 left-0 top-0 z-50 grid grid-cols-3 items-center w-full h-16 transition-transform duration-300 ease-in-out text-white
         ${!isMobile 
-          ? `px-6 lg:px-10 ${scroll > 50 ? "bg-black translate-y-0" : "translate-y-4 bg-black/50"}` 
+          ? `px-6 lg:px-10 ${scroll > 50 ? "bg-black translate-y-0" : "translate-y-8 bg-black/50"}` 
           : "px-4 bg-black translate-y-0"
         }`}
     >
@@ -63,7 +63,7 @@ const Header = () => {
             <span>Bistro</span>
           </div>
         ) : (
-          <img src="/assets/logo.svg" alt="Logo" className="h-10 w-auto" /> 
+          <img src="/assets/logo.svg" alt="Logo" className="h-17 w-auto" /> 
         )}
       </div>
 
