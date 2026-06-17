@@ -53,29 +53,34 @@ const GetReservationForm = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <input 
-                        data-aos="fade-up" 
-                        data-aos-anchor=".inputCon" 
-                        data-aos-delay="300" 
-                        type="text"                       // Start as text to show placeholder
-                        name="res-date" 
-                        placeholder="Reservation Date"     // Now this placeholder will actually show!
-                        onFocus={(e) => (e.target.type = "date")} // Switch to date on focus
-                        onBlur={(e) => { if (!e.target.value) e.target.type = "text" }} // Switch back if empty
-                        className={`${inputClasses} ${webKitClasses} cursor-pointer`} 
-                    />
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="res-date" className="text-sm text-[#858485]">Reservation Date</label>
+                        <input 
+                            data-aos="fade-up" 
+                            data-aos-anchor=".inputCon" 
+                            data-aos-delay="300" 
+                            type="date"
+                            id="res-date"
+                            name="res-date" 
+                            placeholder="Reservation Date"
+                            className={`${inputClasses} ${webKitClasses}`} 
+                        />
+                    </div>
 
-                    <input 
-                        data-aos="fade-up" 
-                        data-aos-anchor=".inputCon" 
-                        data-aos-delay="400" 
-                        type="text"                       // Start as text to show placeholder
-                        name="res-time" 
-                        placeholder="Reservation Time"     // Now this placeholder will show!
-                        onFocus={(e) => (e.target.type = "time")} // Switch to time on focus
-                        onBlur={(e) => { if (!e.target.value) e.target.type = "text" }} // Switch back if empty
-                        className={`${inputClasses} ${webKitClasses} cursor-pointer`} 
-                    />
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="res-time" className="text-sm text-[#858485]">Reservation Time</label>
+                        <input 
+                            data-aos="fade-up" 
+                            data-aos-anchor=".inputCon" 
+                            data-aos-delay="400" 
+                            type="time"
+                            id="res-time"
+                            name="res-time" 
+                            placeholder="Reservation Time"
+                            className={`${inputClasses} ${webKitClasses}`} 
+                        />
+                    </div>
+
                     <input data-aos="fade-up" data-aos-anchor=".inputCon" data-aos-delay="500" type="number" name="res-people" placeholder="# of people" className={inputClasses} />
                 </div>
 
