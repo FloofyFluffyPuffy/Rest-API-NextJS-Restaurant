@@ -39,11 +39,6 @@ h1{
   @apply h-6 fixed top-0 left-0 right-0 flex items-center justify-start transition-transform duration-300 ease-in-out z-50;
 }
 /* Header */
-.header {
-  @apply text-white right-0 left-0 top-0 fixed transition-transform duration-300 ease-in-out items-center grid grid-cols-3 h-14 z-50
-  /* z-49 so it hid behind topbar and make the transition of both top bar and header smooth when scroll
-  translate y conditional is applied */;
-}
 .headerTrans {
   @apply opacity-50
 }
@@ -72,11 +67,10 @@ h1{
 }
 /* Hero */
 .hero {
-  /* Added 'relative' and 'overflow-hidden' to keep the video contained */
-  @apply h-screen pt-20 relative overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed;
-  
-  /* This now acts as a dark fallback overlay before the video loads */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); 
+    @apply h-[100vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+    url("/assets/homeHero.jpg"); 
 }
 .aboutHero{
     @apply h-[100vh] pt-20  bg-cover bg-center bg-no-repeat bg-fixed;
@@ -167,11 +161,6 @@ h1{
   .topBar {
     @apply hidden;
   }
-
-  .header {
-    @apply grid grid-cols-1 gap-3 px-4 py-2 h-auto;
-  }
-
   .logo {
     @apply justify-center ml-0 text-lg;
   }
@@ -219,10 +208,6 @@ h1{
     @apply px-4;
   }
 
-  .header {
-    @apply grid grid-cols-3 gap-4 px-6 h-16;
-  }
-
   .logo {
     @apply pl-4 text-xl;
   }
@@ -261,11 +246,7 @@ h1{
   .topBar {
     @apply px-6;
   }
-
-  .header {
-    @apply grid-cols-3 px-10 h-16;
-  }
-
+  
   .logo {
     @apply pl-12;
   }

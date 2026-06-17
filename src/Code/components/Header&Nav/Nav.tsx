@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useContextData } from "@/Code/typescript/contexts/Provider";
+import { DiVim } from "react-icons/di";
 export const navs = [
   {
     id: 1,
@@ -40,16 +41,21 @@ export const navs = [
 const Nav = () => {
   const [navList, setNavList] = useState(navs);
   const [activeDropdownId, setActiveDropdownId] = useState<number | null>(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const pageName = usePathname();
   const { sectionHash, setSectionHash } = useContextData();
-
+    const [isMobile, setIsMobile] = useState(false)
+  
+    useEffect(() => {
+      const updateSize = () => setIsMobile(window.innerWidth <= 640)
+      updateSize()
+      window.addEventListener('resize', updateSize)
+      return () => window.removeEventListener('resize', updateSize)
+    }, [])
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setActiveDropdownId(null);
-        setMobileOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -63,32 +69,9 @@ const Nav = () => {
       setActiveDropdownId(id);
     }
   };
-
-  const mobileMenuItems = [
-    { id: 1, name: "Home", page: "/" },
-    { id: 2, name: "Menu", page: "/menu" },
-    { id: 3, name: "About", page: "/about" },
-    { id: 40, name: "Booking", page: "/", path: "#reservation" },
-    { id: 41, name: "Catering", page: "/", path: "#events" },
-    { id: 42, name: "Chefs", page: "/about", path: "#chefs" },
-    { id: 43, name: "Gallery", page: "/", path: "#gallery" },
-  ];
-
-  const handleMobileItemClick = (item: { page: string; path?: string }, event: React.MouseEvent<HTMLAnchorElement>) => {
-    setMobileOpen(false);
-    if (item.path && pageName === item.page) {
-      event.preventDefault();
-      const targetElement = document.querySelector(item.path);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    } else if (item.path) {
-      setSectionHash(item.path);
-    }
-  };
-
   return (
-    <nav id="navbar" className="navbar" ref={navRef}>
+    <div>
+       {!isMobile ? <nav id="navbar" className="navbar" ref={navRef}>
       <ul className="navBtn flex flex-wrap justify-center gap-3 items-center">
         {navList.map((nav) => {
           
@@ -166,7 +149,30 @@ const Nav = () => {
           );
         })}
       </ul>
+    </nav> : 
+    /*annoying mobile stuff */
+    <div className="mobileNavCon">
+      <nav id="navbar" className="navbar" ref={navRef}>
+      <ul className="navBtn flex flex-wrap justify-center gap-3 items-center">
+        {navList.map((nav) => {
+          if (nav.name === "Others") return null;
+          return (
+            <li key={nav.id}>
+              <Link
+                href={`/${nav.name === "Home" ? "" : nav.name.toLocaleLowerCase()}`}
+                // Normal navigation text: Default gray, Gold if page is active, White on hover
+                className={`text-12px text-white transition-colors duration-200 hover:text-[#CDA45E]`}
+              >
+                {nav.name}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
+    </div>}
+    </div>
+   
   );
 };
 

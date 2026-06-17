@@ -7,6 +7,7 @@ import { BsClockHistory } from "react-icons/bs";
 
 const TopBar = () => {
   const { scroll, setScroll } = useContextData();
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const onScroll = () => {
@@ -17,9 +18,15 @@ const TopBar = () => {
     //   window.removeEventListener("scroll", onScroll);
     // };
   }, [setScroll]);
-
+      useEffect(() => {
+      const updateSize = () => setIsMobile(window.innerWidth <= 640)
+      updateSize()
+      window.addEventListener('resize', updateSize)
+      return () => window.removeEventListener('resize', updateSize)
+    }, [])
   return (
-    <div
+    <div>
+      {!isMobile && <div
       className={`h-10 fixed top-0 left-0 right-0 flex items-center gap-3 sm:gap-6 px-3 sm:px-6 transition-transform duration-300 ease-in-out z-50 
         ${scroll > 50 ? "-translate-y-full" : "translate-y-0"}`}
     >
@@ -41,6 +48,7 @@ const TopBar = () => {
           Mon-Sat: 11AM - 11PM
         </span>
       </div>
+    </div>}
     </div>
   );
 };

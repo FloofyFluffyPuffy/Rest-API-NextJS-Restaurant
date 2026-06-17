@@ -60,11 +60,14 @@ const Partners = () => {
             <p className="mt-6 text-base leading-relaxed text-[#A0A0A0]">
               We believe exceptional dining starts at the source. By collaborating closely with local farmers, independent fisheries, and artisanal producers, we bring the freshest seasonal ingredients straight to your table while supporting our regional ecosystem.
             </p>
+{/* If NOT mobile, render the logo */}
+            {!isMobile && (
               <img 
-                 src="/assets/logo.svg" 
-                 alt="Downtown Bistro Logo" 
+                src="/assets/logo.svg" 
+                alt="Downtown Bistro Logo" 
                 className="justify-self-center self-center h-88 w-88 -mt-12"
-               />
+              />
+            )}
           </div>
 
           <div className="lg:col-span-8">

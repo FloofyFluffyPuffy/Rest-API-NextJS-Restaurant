@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="hero flex items-center justify-center text-center">
       
-      <video 
+      {/* <video 
         autoPlay 
         loop 
         muted 
@@ -19,9 +19,8 @@ const Hero = () => {
       >
         <source src="/assets/homeHeroBgVideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
 
-      <div className="absolute inset-0 bg-black/40 z-5" />
 
       <div className="hero-content mt-[-34px] px-4 sm:px-6 font-bold uppercase tracking-widest z-10">
         <h1
