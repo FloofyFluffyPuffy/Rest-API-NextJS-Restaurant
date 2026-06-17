@@ -1,14 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useState } from "react";
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-const Events = () => { 
+const Events = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   const events = [
@@ -72,10 +70,8 @@ const Events = () => {
           <Swiper
             modules={[Pagination, Autoplay, Navigation]}
             pagination={{ clickable: true, dynamicBullets: true }}
-            autoplay={{ delay: 4000 }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             speed={1000}
-            onSwiper={() => AOS.refresh()}
-            onSlideChange={() => AOS.refresh()}
             className=""
             style={{
               "--swiper-pagination-bottom": "0px", /* Pushes pagination outside the slide card area */

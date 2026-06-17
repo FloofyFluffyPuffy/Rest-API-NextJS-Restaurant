@@ -1,6 +1,4 @@
 "use client"
-import React from "react";
-import { useContextData } from "@/Code/typescript/contexts/Provider";
 const MenuHero = () => {
   return (
     <div className="menuHero justify-center text-center flex px-4 sm:px-6">

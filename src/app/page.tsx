@@ -6,19 +6,16 @@ import Reservation from "../Code/components/Home/sections/Reservation/Revervatio
 import Testimonials from "../Code/components/Home/sections/Testimonials";
 import BestSellers from "@/Code/components/Home/sections/BestSellers/BestSellers";
 import Gallery from "@/Code/components/Home/sections/Gallery/Gallery";
-import SectionHashScrollHandler from "@/Code/components/utilities/SectionHashScrollHandler";
 const HomePage = () => {
-  // const fc = await getFoodBySlug('fried-chicken')
   return (
     <>
       <Hero />
-      <BestSellers/>
+      <BestSellers />
       <WhyUs />
-      <Testimonials/>
-      <Gallery/>
-      <Events/>
-      <Reservation/>
-      <SectionHashScrollHandler/>
+      <Testimonials />
+      <Gallery />
+      <Events />
+      <Reservation />
     </>
   );
 };

@@ -45,58 +45,73 @@ const GetReservationForm = () => {
 
     return (
         <div className="bg-[#0a0a0a] p-10">
-            <form onSubmit={handleSubmit} className="max-w-6xl mx-auto space-y-6">
+            <form
+                onSubmit={handleSubmit}
+                className="max-w-6xl mx-auto space-y-6"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-anchor-placement="top-bottom"
+            >
                 <div className="inputCon grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <input data-aos="fade-up" data-aos-anchor=".inputCon" type="text" name="your-name" placeholder="Your Name" required className={inputClasses} />
-                    <input data-aos="fade-up" data-aos-anchor=".inputCon" data-aos-delay="100" type="email" name="your-email" placeholder="Your Email" required className={inputClasses} />
-                    <input data-aos="fade-up" data-aos-anchor=".inputCon" data-aos-delay="200" type="tel" name="your-phone" placeholder="Your Phone" className={inputClasses} />
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="your-name" className="text-sm text-[#858485]">Name</label>
+                        <input type="text" id="your-name" name="your-name" placeholder="Your Name" required className={inputClasses} />
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="your-email" className="text-sm text-[#858485]">Email</label>
+                        <input type="email" id="your-email" name="your-email" placeholder="Your Email" required className={inputClasses} />
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="your-phone" className="text-sm text-[#858485]">Phone Number</label>
+                        <input type="tel" id="your-phone" name="your-phone" placeholder="Your Phone" className={inputClasses} />
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="flex flex-col gap-2">
                         <label htmlFor="res-date" className="text-sm text-[#858485]">Reservation Date</label>
-                        <input 
-                            data-aos="fade-up" 
-                            data-aos-anchor=".inputCon" 
-                            data-aos-delay="300" 
+                        <input
                             type="date"
                             id="res-date"
-                            name="res-date" 
+                            name="res-date"
                             placeholder="Reservation Date"
-                            className={`${inputClasses} ${webKitClasses}`} 
+                            className={`${inputClasses} ${webKitClasses}`}
                         />
                     </div>
 
                     <div className="flex flex-col gap-2">
                         <label htmlFor="res-time" className="text-sm text-[#858485]">Reservation Time</label>
-                        <input 
-                            data-aos="fade-up" 
-                            data-aos-anchor=".inputCon" 
-                            data-aos-delay="400" 
+                        <input
                             type="time"
                             id="res-time"
-                            name="res-time" 
+                            name="res-time"
                             placeholder="Reservation Time"
-                            className={`${inputClasses} ${webKitClasses}`} 
+                            className={`${inputClasses} ${webKitClasses}`}
                         />
                     </div>
 
-                    <input data-aos="fade-up" data-aos-anchor=".inputCon" data-aos-delay="500" type="number" name="res-people" placeholder="# of people" className={inputClasses} />
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="res-people" className="text-sm text-[#858485]">Party Size</label>
+                        <input type="number" id="res-people" name="res-people" placeholder="# of people" className={inputClasses} />
+                    </div>
                 </div>
 
-                <textarea 
-                    data-aos="fade-up"
-                    data-aos-anchor=".inputCon"
-                    data-aos-delay="600"
-                    name="your-message" 
-                    placeholder="Example: Outside seating preferred, high chair needed for a toddler." 
-                    rows={6} 
-                    className={`${inputClasses} resize-none`}
-                />
-                
-                <div data-aos="zoom-in" data-aos-anchor=".inputCon" data-aos-delay="700" className="formSubmit flex justify-center">
-                    <button 
-                        type="submit" 
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="your-message" className="text-sm text-[#858485]">Additional Notes</label>
+                    <textarea
+                        id="your-message"
+                        name="your-message"
+                        placeholder="Example: Outside seating preferred, high chair needed for a toddler."
+                        rows={6}
+                        className={`${inputClasses} resize-none`}
+                    />
+                </div>
+
+                <div className="formSubmit flex justify-center">
+                    <button
+                        type="submit"
                         className="cursor-pointer flex text-[18px] text-white hover:text-black rounded-full border-2 border-[#CDA45E]/70 py-2 px-6 transition-all duration-500 hover:bg-[#CDA45E] hover:scale-105"
                     >
                         Send Reservation

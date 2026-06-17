@@ -1,9 +1,6 @@
 "use client"
-import React from 'react'
 import Link from 'next/link'
-import { usePathname } from "next/navigation";
-import { useContextData } from "@/Code/typescript/contexts/Provider";
-import { navs } from "./Nav"; // Imports your dynamic nav array directly from your Nav file
+import { navs } from "./Nav";
 import { 
   FaFacebookF, 
   FaInstagram, 
@@ -16,8 +13,6 @@ import {
 } from 'react-icons/fa'
 
 const Footer = () => {
-  const pageName = usePathname();
-  const { setSectionHash } = useContextData();
 
   return (
     <footer className="bg-[#0f0e0c] text-gray-400 border-t border-[#26231e] pt-16 pb-8">
@@ -55,28 +50,12 @@ const Footer = () => {
           <h4 className="text-[#CDA45E] font-semibold text-base tracking-wider uppercase">Quick Links</h4>
           <ul className="flex flex-col gap-2 text-sm">
             {navs.map((nav) => {
-              // Handle links that contain a dropdown submenu
               if (nav.dropdown) {
                 return nav.dropdown.map((item) => (
                   <li key={item.id}>
                     <Link
-                      href={pageName === item.page ? item.path : item.page}
+                      href={`${item.page}${item.path}`}
                       className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors"
-                      onClick={(e) => {
-                        // ONLY smooth scroll and prevent default if we are ALREADY on that target page
-                        if (pageName === item.page) {
-                          e.preventDefault();
-                          const targetElement = document.querySelector(item.path);
-                          if (targetElement) {
-                            targetElement.scrollIntoView({ behavior: "smooth" });
-                          }
-                        }
-                        // If we are NOT on the correct page, do NOT call e.preventDefault(). 
-                        // Let Next.js natively navigate to the href link!
-                        else {
-                          setSectionHash(item.path);
-                        }
-                      }}
                     >
                       <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
                       {item.name}
@@ -85,25 +64,12 @@ const Footer = () => {
                 ));
               }
 
-              // Handle top-level static links (Home, Menu, About, etc.)
               const targetPage = `/${nav.name === "Home" ? "" : nav.name.toLocaleLowerCase()}`;
               return (
                 <li key={nav.id}>
                   <Link
                     href={targetPage}
                     className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors"
-                    onClick={(e) => {
-                      // Smooth scroll to element if matching section anchor is on current page
-                      if (pageName === targetPage) {
-                        e.preventDefault();
-                        const targetElement = document.getElementById(nav.target);
-                        if (targetElement) {
-                          targetElement.scrollIntoView({ behavior: "smooth" });
-                        }
-                      } else {
-                        setSectionHash(`#${nav.target}`);
-                      }
-                    }}
                   >
                     <FaChevronRight size={10} className="text-[#CDA45E]/50 group-hover:translate-x-1 transition-transform" />
                     {nav.name}

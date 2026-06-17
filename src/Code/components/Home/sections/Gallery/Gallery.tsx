@@ -1,9 +1,8 @@
 import getGallery from '@/Code/typescript/api/GetGallery'
-import React from 'react'
 import Gallery2 from './Gallery2'
 const Gallery = async () => {
-    const galleryData = await getGallery() 
-    console.log(galleryData)
+    const galleryData = await getGallery()
+    if (!galleryData?.length) return null
   return (
     <div id="gallery" className="gallery bg-[#0C0B09] text-amber-50 px-4 py-8 sm:px-8" 
         /*

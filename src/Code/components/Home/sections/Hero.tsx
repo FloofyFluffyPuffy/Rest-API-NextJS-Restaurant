@@ -1,11 +1,6 @@
-"use client";
-import React from "react";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { useContextData } from "../../../typescript/contexts/Provider";
 
 const Hero = () => {
-  const { scroll, setScroll } = useContextData();
   return (
     <div className="hero flex items-center justify-center text-center">
       

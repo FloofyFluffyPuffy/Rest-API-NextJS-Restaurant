@@ -1,34 +1,31 @@
 "use client";
 import { useState, useEffect } from "react";
-import React from "react";
-import { useContextData } from "@/Code/typescript/contexts/Provider";
 import { MdOutlinePhonelinkRing } from "react-icons/md";
 import { BsClockHistory } from "react-icons/bs";
 
 const TopBar = () => {
-  const { scroll, setScroll } = useContextData();
-  const [isMobile, setIsMobile] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScroll(window.scrollY);
-    };
-    window.addEventListener("scroll", onScroll);
-    // return () => {
-    //   window.removeEventListener("scroll", onScroll);
-    // };
-  }, [setScroll]);
-      useEffect(() => {
-      const updateSize = () => setIsMobile(window.innerWidth <= 640)
-      updateSize()
-      window.addEventListener('resize', updateSize)
-      return () => window.removeEventListener('resize', updateSize)
-    }, [])
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const updateSize = () => setIsMobile(window.innerWidth <= 640);
+    updateSize();
+    window.addEventListener("resize", updateSize, { passive: true });
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <div>
       {!isMobile && <div
-      className={`h-10 fixed top-0 left-0 right-0 flex items-center gap-3 sm:gap-6 px-3 sm:px-6 transition-transform duration-300 ease-in-out z-50 
-        ${scroll > 50 ? "-translate-y-full" : "translate-y-0"}`}
+      className={`h-8 fixed top-0 left-0 right-0 flex items-center gap-3 sm:gap-6 px-3 sm:px-6 transition-transform duration-300 ease-in-out z-50 
+        ${isScrolled ? "-translate-y-full" : "translate-y-0"}`}
     >
       {/* translate-y-full mean move it up visually by it full height */}
       <div className="topBarItemCon flex items-center gap-2">
