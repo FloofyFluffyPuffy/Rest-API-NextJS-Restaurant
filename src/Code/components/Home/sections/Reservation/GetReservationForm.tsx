@@ -51,7 +51,6 @@ const GetReservationForm = () => {
                 className="max-w-6xl mx-auto space-y-6"
                 data-aos="fade-up"
                 data-aos-delay="200"
-                data-aos-anchor-placement="top-bottom"
             >
                 {/* Row 1: Contact Details */}
                 <div className="inputCon grid grid-cols-1 md:grid-cols-3 gap-6">
