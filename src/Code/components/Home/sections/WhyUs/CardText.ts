@@ -10,7 +10,7 @@ export const WUCardList = [
     id: 2,
     title: "Cozy Atmosphere",
     reason:
-      "Dining spaces are design with a cozy homelike atmosphere. Whether you are winding down after a long day or celebrating a milestone, you will feel right at home",
+      "Dining spaces are designed with a cozy, home-like atmosphere. Whether you're winding down after a long day or celebrating a milestone, you'll feel right at home.",
       icon: "<MdTableRestaurant />"
   },
   {

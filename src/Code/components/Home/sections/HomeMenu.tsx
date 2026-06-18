@@ -47,7 +47,7 @@ const HomeMenu = async () => {
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        Customer's Favorite
+        Customers' Favorites
       </h1>
       {/*
       So first make a the menu body as grid so we can have 2 colume same size

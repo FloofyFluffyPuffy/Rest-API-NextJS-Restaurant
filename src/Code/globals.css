@@ -1,9 +1,37 @@
 @import "tailwindcss";
 body {
-  background: white;
-  color: black;
-  font-family: "Helvetica", "Arial", sans-serif;
+  background: #090808;
+  color: #F8F8F4;
+  font-family: var(--font-sans), "Helvetica", "Arial", sans-serif;
 }
+
+:root {
+  --font-sans: Inter, "Helvetica", "Arial", sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+body,
+button,
+input,
+textarea,
+select,
+a,
+span,
+div,
+p {
+  font-family: var(--font-sans), "Helvetica", "Arial", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
   scrollbar-width: none;

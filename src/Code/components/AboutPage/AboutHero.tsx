@@ -27,7 +27,7 @@ const AboutHero = () => {
           data-aos-anchor-placement="top-bottom"
         >
           Driven by a passion for culinary excellence, we bring people together over plates that tell a story. 
-          Every ingredient is chosen with purpose, and every dish made with love and passion.
+          Every ingredient is chosen with purpose, and every dish is made with love and passion.
         </h2>
 
         {/* Optional: Call to action button to complete the Hero feel */}

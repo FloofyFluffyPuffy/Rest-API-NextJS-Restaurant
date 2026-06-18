@@ -26,7 +26,7 @@ const BestSellers = async () => {
                     data-aos-delay="100"
                     data-aos-anchor="#best-sellers-section"
                 >
-                    Customers's Favorite
+                    Customers' Favorites
                 </h1>
 
                 <div 

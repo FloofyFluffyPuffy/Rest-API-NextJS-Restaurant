@@ -57,7 +57,7 @@ const Testimonials = () => {
                     data-aos-delay="100"
                     data-aos-anchor="#testimonials-section"
                 >
-                    Customers's Review
+                    Customer Reviews
                 </h1>
 
                 <div 
