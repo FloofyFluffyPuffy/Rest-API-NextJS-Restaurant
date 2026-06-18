@@ -136,12 +136,13 @@ const Nav = () => {
             );
           }
 
+          const navHref = `/${nav.name === "Home" ? "" : nav.name.toLocaleLowerCase()}`;
+          const isActiveNav = pageName === navHref;
           return (
             <li key={nav.id}>
               <Link
-                href={`/${nav.name === "Home" ? "" : nav.name.toLocaleLowerCase()}`}
-                // Normal navigation text: Default gray, Gold if page is active, White on hover
-                className={`text-12px text-white transition-colors duration-200 hover:text-[#CDA45E]`}
+                href={navHref}
+                className={`text-12px transition-colors duration-200 hover:text-[#CDA45E] ${isActiveNav ? "text-[#CDA45E]" : "text-white"}`}
               >
                 {nav.name}
               </Link>
@@ -156,12 +157,13 @@ const Nav = () => {
       <ul className="navBtn flex flex-wrap justify-center gap-3 items-center">
         {navList.map((nav) => {
           if (nav.name === "Others") return null;
+          const navHref = `/${nav.name === "Home" ? "" : nav.name.toLocaleLowerCase()}`;
+          const isActiveNav = pageName === navHref;
           return (
             <li key={nav.id}>
               <Link
-                href={`/${nav.name === "Home" ? "" : nav.name.toLocaleLowerCase()}`}
-                // Normal navigation text: Default gray, Gold if page is active, White on hover
-                className={`text-12px text-white transition-colors duration-200 hover:text-[#CDA45E]`}
+                href={navHref}
+                className={`text-12px transition-colors duration-200 hover:text-[#CDA45E] ${isActiveNav ? "text-[#CDA45E]" : "text-white"}`}
               >
                 {nav.name}
               </Link>
