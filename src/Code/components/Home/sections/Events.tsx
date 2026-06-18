@@ -115,7 +115,7 @@ const Events = () => {
                         <ul className="space-y-3 sm:space-y-4">
                           {event.features.map((feature, index) => (
                             <li key={index} className="flex items-start gap-3">
-                              <span className="text-[#CDA45E] text-lg leading-none">✔</span>
+                              <span className="text-[#CDA45E] text-lg leading-none">✓</span>
                               <span className="text-xs sm:text-sm text-gray-200">{feature}</span>
                             </li>
                           ))}
