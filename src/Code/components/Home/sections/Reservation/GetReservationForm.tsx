@@ -19,7 +19,7 @@ const GetReservationForm = () => {
             const response = await fetch(url, {
                 method: 'POST',
                 body: formData,
-            })
+                })
             const data = await response.json()
             console.log("Response data:", data);
             if (data.status === 'mail_sent') {
@@ -78,6 +78,7 @@ const GetReservationForm = () => {
                             type="date"
                             id="res-date"
                             name="res-date"
+                            defaultValue="2026-09-20"
                             placeholder="Reservation Date"
                             className={`${inputClasses} ${webKitClasses}`}
                         />
@@ -89,6 +90,7 @@ const GetReservationForm = () => {
                             type="time"
                             id="res-time"
                             name="res-time"
+                            defaultValue="16:45"
                             placeholder="Reservation Time"
                             className={`${inputClasses} ${webKitClasses}`}
                         />
