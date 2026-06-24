@@ -60,7 +60,7 @@ const Footer = () => {
                 return nav.dropdown.map((item) => (
                   <li key={item.id}>
                     <Link
-                      href={pageName === item.page ? item.path : item.page}
+                      href={pageName === item.page || item.name === "Location" ? item.path : item.page}
                       className="hover:text-[#CDA45E] flex items-center gap-1 group transition-colors"
                       onClick={(e) => {
                         // ONLY smooth scroll and prevent default if we are ALREADY on that target page
@@ -73,7 +73,7 @@ const Footer = () => {
                         }
                         // If we are NOT on the correct page, do NOT call e.preventDefault(). 
                         // Let Next.js natively navigate to the href link!
-                        else {
+                        else if (item.name !== "Booking" && item.name !== "Location") {
                           setSectionHash(item.path);
                         }
                       }}
@@ -149,7 +149,7 @@ const Footer = () => {
       </div>
 
       {/* Map Segment */}
-      <div className="max-w-6xl mx-auto px-6 mt-10">
+      <div className="max-w-6xl mx-auto px-6 mt-10" id="location">
         <div className="w-full h-64 rounded-xl overflow-hidden border border-[#26231e] bg-[#161410] p-1">
           <iframe 
             src="https://maps.google.com/maps?q=3828%20Piermont%20Dr%20NE,%20Albuquerque,%20NM%2087111&t=&z=15&ie=UTF8&iwloc=&output=embed" 
